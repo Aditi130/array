@@ -1,52 +1,30 @@
-# Prerequisites
-*.d
+#include <stdio.h>
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
-
-# Linker output
-*.ilk
-*.map
-*.exp
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+int main() 
+{
+    int a[3][3],i,j, n=3, sum=n;
+    
+    printf("\nEnter matrix elements: \n");
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            scanf("%d", &a[i][j]);
+        }
+    }
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            printf("\t%d",a[i][j]);
+        }
+        printf("\n\n");
+    }
+    for(i=0;i<n;i++);
+    {
+        sum=sum+a[i][j];
+    }
+    printf("\nDiagonal element sum: %d",sum);
+    
+    return 0;
+}
